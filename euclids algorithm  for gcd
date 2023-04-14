@@ -1,0 +1,32 @@
+# euclids algorithm 
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    //euclids algorithm
+    int t,j,temp,a,b;
+    scanf("%d",&t);
+    for(j=0;j<t;j++)
+    {
+        scanf("%d%d",&a,&b);
+        if(a<b)
+        {
+            temp=a;
+            a=b;
+            b=temp;
+        }
+        while(a%b!=0)
+        {
+            int r = a % b;
+        a = b;
+        b = r;
+        }
+        printf("%d\n",b);
+    }
+    
+    return 0;
+}
